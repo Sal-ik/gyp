@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ViT Image Classifier</title>
+</head>
+<body>
+    <h1>Upload Image for Classification</h1>
+    <form method="post" enctype="multipart/form-data" action="/classify/">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Classify</button>
+    </form>
+</body>
+</html>
